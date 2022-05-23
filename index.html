@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Temperature Coversion Calculator</title>
-</head>
+<title>Fahrenheit to Celcius Temperature Converter</title>
 <body>
-<h2>FAHRENHEIT TO CELSIUS CALCULATOR</h2>
-<form method="post" onSubmit="call();">
-<input type="number" id="test">
-<input type="submit">
-</form>
-<script>
-  function call(){
-var x = document.getElementById("test").value;
-let y = 0;
-y = (x - 30) / 2;
-alert(y)
 
+<h2>Temperature Converter</h2>
+<p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
+
+<p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius"></span></p>
+
+<script>
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+}
 </script>
 
 </body>
