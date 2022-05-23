@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 <html>
+<head>
 <title>Fahrenheit to Celcius Temperature Converter</title>
+<style>
+body {
+color: white;
+background: black;
+}
+input {
+background: black;
+color: white;
+}
+</style>
+</head>
 <body>
-
+<div>
 <h2>Temperature Converter</h2>
 <p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
 
@@ -11,7 +23,7 @@
   <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
 </p>
 <p>Celcius: <span id="outputCelcius"></span></p>
-
+</div>
 <script>
 function temperatureConverter(valNum) {
   valNum = parseFloat(valNum);
